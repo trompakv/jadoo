@@ -10,6 +10,10 @@
     --orange: #f1a501;
 }
 
+* {
+    transition: all 0.5s;
+}
+
 .container {
     width: 1150px;
     margin: 0 auto;
@@ -25,10 +29,21 @@ body {
 .body-decore {
     position: absolute;
 
-    top: -50px;
-    right: -30px;
+    top: -60px;
+    right: -0px;
 
     z-index: -5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 150px;
+}
+
+section {
+    position: relative;
 }
 
 a {
@@ -162,6 +177,8 @@ header {
     font-family: "Poppins", sans-serif;
 
     font-weight: 700;
+
+    text-transform: uppercase;
 }
 
 .hero-header {
@@ -173,9 +190,21 @@ header {
 
     font-weight: 700;
 
-    width: 540px;
+    width: 600px;
 
     margin: 25px 0;
+
+    position: relative;
+}
+
+.hero-header::before {
+    content: url("img/hero/Decore.svg");
+    position: absolute;
+
+    z-index: -4;
+
+    top: 10px;
+    left: 255px;
 }
 
 .hero-description {
@@ -184,10 +213,19 @@ header {
     color: var(--light-text);
 
     line-height: 30px;
+
+    width: 477px;
 }
 
 .hero-img {
     height: 700px;
+}
+
+.hero-down {
+    display: flex;
+    align-items: center;
+
+    margin-top: 34px;
 }
 
 .hero-btn {
@@ -195,4 +233,228 @@ header {
     font-family: "Roboto", sans-serif;
 
     padding: 18px 26px;
+
+    border-radius: 10px;
+    background-color: var(--orange);
+
+    color: #fff;
+
+    border: none;
+
+    cursor: pointer;
+
+    box-shadow: 0px 10px 25px #ffd0003b;
+}
+
+.hero-playbtn {
+    width: 52px;
+    height: 52px;
+
+    margin-left: 45px;
+
+    cursor: pointer;
+
+    filter: drop-shadow(0px 10px 25px #ff000044);
+}
+
+.hero-down span {
+    margin-left: 14px;
+
+    font-size: 17px;
+    color: var(--light-mini-text);
+}
+
+.hero-decore {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+}
+
+/* ! */
+/* ! */
+/* ! */
+/* ! CATEGORY ! */
+
+.section-header {
+    font-size: 50px;
+
+    font-family: "Volkhov", sans-serif;
+    font-weight: 900;
+}
+
+.mini-header {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+
+    color: var(--light-text);
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services h2 {
+    margin: 10px 0 68px 0;
+}
+
+.services-cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    position: relative;
+
+    padding: 40px 34px;
+
+    border-radius: 36px;
+    background-color: #fff;
+}
+
+.services-card:hover {
+    box-shadow: 0px 20px 30px #00000010;
+}
+.services-card::after {
+    content: url("img/services/decore2.svg");
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    opacity: 0;
+
+    z-index: -3;
+
+    transition: all 0.5s;
+}
+.services-card:hover::after {
+    bottom: -30px;
+    left: -30px;
+
+    opacity: 1;
+}
+
+.services-card h3 {
+    width: 190px;
+
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+    color: var(--dark-h);
+}
+.services-card p {
+    width: 180px;
+
+    font-weight: 400;
+    font-size: 16px;
+
+    line-height: 26px;
+
+    color: var(--light-text);
+}
+
+/* ! */
+/* ! */
+/* ! */
+/* ! Top selling ! */
+
+.tops {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tops-cards {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+
+    margin-top: 60px;
+
+    position: relative;
+
+    filter: drop-shadow(0px 20px 25px #00000010);
+}
+
+.tops-card {
+    position: relative;
+}
+
+.tops-card:nth-child(3):after {
+    content: url("img/top-selling/Decore.svg");
+    position: absolute;
+    right: -60px;
+    bottom: 50px;
+    z-index: -2;
+}
+
+.tops-card_info {
+    position: absolute;
+    bottom: 0px;
+
+    width: calc(315px - (25px * 2));
+    height: calc(130px - (28px * 2));
+
+    background: #fff;
+
+    border-radius: 0 0 24px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 28px 25px;
+}
+
+.tops-card_info-left {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+
+    align-self: flex-start;
+}
+
+.tops-card-durability {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+}
+
+.tops-card_price {
+    align-self: flex-start;
+
+    color: var(--light-text);
+}
+
+.tops-card-font {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+
+    color: var(--light-text);
 }
