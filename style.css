@@ -126,6 +126,10 @@ header {
     color: var(--dark);
 }
 
+.header-language {
+    gap: 8px;
+}
+
 .header-content {
     gap: 85px;
 }
@@ -603,13 +607,21 @@ header {
 .booking-card-info-peoples {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
+
+    width: 320px;
+}
+
+.booking-card-info-text {
+    display: flex;
+    align-content: center;
+    justify-content: center;
     gap: 8px;
 }
 
 .booking-mini_card {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: start;
 
     padding: 18px 20px;
@@ -651,6 +663,7 @@ header {
 .booking-mini_card-progress-text span {
     color: #8a79df;
 }
+
 .booking-mini_card-progress_bar {
     margin-top: 10px;
 
